@@ -1,0 +1,3 @@
+concerto_cms_markdown_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ConcertoCmsMarkdownBundle:Default:index }
