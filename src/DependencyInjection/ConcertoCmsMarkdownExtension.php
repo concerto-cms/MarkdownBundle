@@ -24,5 +24,9 @@ class ConcertoCmsMarkdownExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+        if (isset($config["sources"])) {
+            $repoDefinition = $container->getDefinition('concerto_cms_markdown.service.sources_repository');
+            $repoDefinition->addMethodCall('addSources', [$config["sources"]]);
+        }
     }
 }

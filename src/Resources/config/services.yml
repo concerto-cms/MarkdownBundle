@@ -1,7 +1,3 @@
-parameters:
-#    concerto_cms_markdown.example.class: ConcertoCms\MarkdownBundle\Example
-
 services:
-#    concerto_cms_markdown.example:
-#        class: %concerto_cms_markdown.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    concerto_cms_markdown.service.sources_repository:
+        class: ConcertoCms\MarkdownBundle\Service\SourcesRepository
